@@ -33,13 +33,13 @@ int main() {
 
     printf("\nIngrese los pares uno a uno.\n");
 
-    int pairNumber=0;
+    int pairNumber=0; //número de la pareja que está ingresando
     for (int i = 0 ; i < (2*n); ++i) {
         if (i%2 == 0)
         {
-            pairNumber++;
+            pairNumber++;//Aumenta en cada nueva pareja
             printf("\nPrimer número, par #%d: ", pairNumber);
-            scanf("%d", &firstNumbers[pairNumber-1]);
+            scanf("%d", &firstNumbers[pairNumber-1]);//se guarda el número en la posición de la pareja. Se resta 1 para que sea la posición.
         }
         else
         {
@@ -53,35 +53,8 @@ int main() {
 
     for (int i = 0; i < n; i++)
     {
-        printf("\n%d\n", firstNumbers[i]);
-        printf("\n%d\n", secondNumbers[i]);
-    }
-
-    for (int i = 0; i < n; i++)
-    {
         multiplo(firstNumbers[i], secondNumbers[i]);
     }
-    
-        
-
-    /* int firstN;
-    int secondN;
-
-    printf("Este programa analiza si el segundo número ingresado el múltiplo del primero.\n\n");
-    printf("Ingrese el primer número: ");
-    scanf("%d", &firstN);
-
-    printf("Ingrese el segundo número: ");
-    scanf("%d", &secondN);
-
-    if (multiplo(firstN, secondN) == 1)
-    {
-        printf("El primer número sí es múltiplo del segundo número.");
-    }
-    else
-    {
-        printf("El primer número no es múltiplo del segundo número.");
-    }*/
     
     scanf("%d", &n);//comando para evitar que la consola se cierre.
 }
