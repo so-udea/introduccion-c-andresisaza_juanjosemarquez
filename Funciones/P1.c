@@ -24,7 +24,6 @@ int multiplo(int a, int b){
 }
 
 int main() {
-
     int n;
     printf("Ingrese el total de pares que quiere analizar: ");
     scanf("%d", &n);
