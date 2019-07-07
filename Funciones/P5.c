@@ -6,25 +6,25 @@
 #include <stdio.h>
 #include <math.h>
 
+/**
+ * Función que toma un valor entero y devuelva el número con sus dígitos en reversa.
+ */
 int reverseNumber(int x){
     int num = x;
-    int n = ceil(log10(x));
-    printf("\n%d\n", n);
-    int auxn = n-1;
+    int n = ceil(log10(x));//Función techo del logaritmo del número para saber cuántos dígitos tiene.
     int numbers[n];
     int ans = 0;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) //Se guardan los digítos en el vector de forma inversa.
     {
-        numbers[i] = num % 10;
-        num /= 10;
-    }
+        numbers[i] = num % 10;//Se guarda el último dígito en el vector.
+        num /= 10;//Se elimina el último dígito de la variable que almacena una copia de x.
+    }    
     
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)//Se vuelve a recrear el número, pero de forma invertida.
     {
-        printf("%d", numbers[i]);
-        ans += numbers[i]*(pow(10, auxn));
-        auxn--;
+        int aux = ans * 10;
+        ans = aux + numbers[i];
     }
 
     return ans;

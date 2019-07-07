@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <math.h>
 
+/**
+ * Función que calcula la suma de la progresión geométrica 1 + x + x^2 + x^3 + x^4 + ⋯ + x^n.
+ */
 float geomProg(int x, int n){
     float ans = 0;
 
