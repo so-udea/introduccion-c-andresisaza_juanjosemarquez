@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
                 respuestaUsuario = multiplicar(factor1, factor2);
             }
         }
-        printf("¿Desea continunar? (1=SI  0=NO): ");
+        printf("¿Desea continuar? (1=SI  0=NO): ");
         scanf("%d", &bandera);
         printf("\n");
     }
